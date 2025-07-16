@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodTech E-Learning Platform</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #4d93fc, #2a6dd1, #1869e2, #095ac5);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    #splash {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: rgba(40, 43, 235, 0.7);
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+      animation: fadeOut 1s ease-in-out forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    #main, #viewPage, #coursePage, #progressPage {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 100vh;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: 700;
+      color: rgb(213, 220, 236);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: rgb(14, 12, 12);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #110e0e;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .categories div {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 280px;
+      text-align: center;
+    }
+
+    .categories div:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .categories img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .categories button, .action-btn {
+      padding: 15px 25px;
+      font-size: 16px;
+      background: #e26906;
+      color: white;
+      border: none;
+      border-radius: 0 0 15px 15px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .categories button:hover, .action-btn:hover {
+      background:  #da7c10;
+      transform: scale(1.05);
+    }
+
+    .action-btn {
+      border-radius: 50px;
+      width: auto;
+      margin: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #f59607, #da7c10);
+    }
+
+    iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
+    .progress-container {
+      width: 80%;
+      max-width: 600px;
+      background: #ddd;
+      border-radius: 30px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 25px;
+      background: #28a745;
+      width: 0%;
+      color: white;
+      line-height: 25px;
+      text-align: center;
+      border-radius: 30px;
+      transition: width 1s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      h1, h2 {
+        font-size: 1.8em;
+      }
+
+      .categories {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      iframe {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">CodTech</div>
+
+  <!-- Main Page -->
+  <div id="main">
+    <div class="logo">CodTech</div>
+    <h1>Welcome to CodTech E-Learning Platform</h1>
+    <p>Learn top skills from industry experts. Pick a category:</p>
+
+    <div class="categories">
+      <div>
+        <img src="https://thedesignlove.com/wp-content/uploads/2021/01/Data-science-logo-21.jpg" alt="Data Science">
+        <button onclick="openViewPage('Data Science', 'https://www.youtube.com/embed/ua-CiDNNj30')">Data Science</button>
+      </div>
+      <div>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.aMzJKHIg9mSvNSBePZB6oQHaEo?pid=Api&P=0&h=180" alt="Business Analytics">
+        <button onclick="openViewPage('Business Analytics', 'https://www.youtube.com/embed/5hHI9uYW-tQ?t=14')">Business Analytics</button>
+      </div>
+      <div>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.dmMrRnnw7omRMqNLu4qqswHaE8?pid=Api&P=0&h=180" alt="Software Development">
+        <button onclick="openViewPage('Software Development', 'https://www.youtube.com/embed/pQN-pnXPaVg')">Software Development</button>
+      </div>
+      <div>
+        <img src="https://tse2.mm.bing.net/th/id/OIP.9b805kJYBkqNtaMIO_0BawAAAA?pid=Api&P=0&h=180" alt="Cyber Security">
+        <button onclick="openViewPage('Cyber Security', 'https://www.youtube.com/embed/inWWhr5tnEA')">Cyber Security</button>
+      </div>
+      <div>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.DxkB45st4DyyVuK70Ed4fAHaFj?pid=Api&P=0&h=180" alt="Project Management">
+        <button onclick="openViewPage('Project Management', 'https://www.youtube.com/embed/HrEIcyJUs6c?t=6')">Project Management</button>
+      </div>
+      <div>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.eUUpZVsMF8yAHi6uW44f5gHaD-?pid=Api&P=0&h=180" alt="AI & ML">
+        <button onclick="openViewPage('AI & ML', 'https://www.youtube.com/embed/ukzFI9rgwfU')">AI & ML</button>
+      </div>
+      <div>
+        <img src="https://tse2.mm.bing.net/th/id/OIP.aL1LqWuHlMDI1Yw_CWBBHAHaIc?pid=Api&P=0&h=180" alt="DevOps">
+        <button onclick="openViewPage('DevOps', 'https://www.youtube.com/embed/0yWAtQ6wYNM')">DevOps</button>
+      </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGLt3QWBIVYRlWrTxPLArEdh5jgIBkKMTtlQ&s" alt="Digital Marketing">
+        <button onclick="openViewPage('Digital Marketing', 'https://www.youtube.com/embed/BZLUEKnMfIY?t=13')">Digital Marketing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Page -->
+  <div id="viewPage">
+    <div class="logo">CodTech</div>
+    <h2 id="viewCourseTitle"></h2>
+    <p>Click the button below to view the course video.</p>
+    <button class="action-btn" onclick="openCourse()">View</button>
+    <button class="action-btn" onclick="backToMain()">Back to Categories</button>
+  </div>
+
+  <!-- Course Page -->
+  <div id="coursePage">
+    <div class="logo">CodTech</div>
+    <h2 id="courseTitle"></h2>
+    <iframe id="courseVideo" src="" allowfullscreen></iframe>
+    <br><br>
+    <button id="progressBtn" class="action-btn" onclick="goToProgress()" style="display:none;">Go to Progress</button>
+    <button class="action-btn" onclick="backToMain()">Back to Categories</button>
+  </div>
+
+  <!-- Progress Page -->
+  <div id="progressPage">
+    <div class="logo">CodTech</div>
+    <h2>Course Progress</h2>
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar">0%</div>
+    </div>
+    <button class="action-btn" onclick="backToMain()">Back to Categories</button>
+  </div>
+
+  <script>
+    let selectedCourse = {};
+    let progress = 0;
+    let progressBtnTimer;
+
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }, 2000);
+
+    function openViewPage(title, videoUrl) {
+      selectedCourse = { title: title, url: videoUrl };
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('viewPage').style.display = 'block';
+      document.getElementById('viewCourseTitle').innerText = title;
+    }
+
+    function openCourse() {
+      document.getElementById('viewPage').style.display = 'none';
+      document.getElementById('coursePage').style.display = 'block';
+      document.getElementById('courseTitle').innerText = selectedCourse.title;
+      document.getElementById('courseVideo').src = selectedCourse.url;
+      document.getElementById('progressBtn').style.display = 'none';
+
+      clearTimeout(progressBtnTimer);
+      progressBtnTimer = setTimeout(() => {
+        document.getElementById('progressBtn').style.display = 'inline-block';
+      }, 20000);
+    }
+
+    function goToProgress() {
+      progress = 100;
+      updateProgress();
+      document.getElementById('coursePage').style.display = 'none';
+      document.getElementById('progressPage').style.display = 'block';
+    }
+
+    function updateProgress() {
+      const bar = document.getElementById('progressBar');
+      bar.style.width = progress + '%';
+      bar.innerText = progress + '%';
+    }
+
+    function backToMain() {
+      document.getElementById('viewPage').style.display = 'none';
+      document.getElementById('coursePage').style.display = 'none';
+      document.getElementById('progressPage').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+      document.getElementById('courseVideo').src = '';
+      progress = 0;
+      updateProgress();
+      clearTimeout(progressBtnTimer);
+    }
+  </script>
+
+</body>
+</html>
