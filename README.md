@@ -59,12 +59,12 @@ In conclusion, this E-Learning Platform is a step toward digital education empow
 
 Output :
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/569b0862-7836-4d3c-a860-0f746c7a98b6" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/70c75c1f-243f-4c4d-9935-6156a82daafd" />
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/eadfb0e4-156b-46b2-b705-3ed1f61747cd" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/e0f3d915-41d2-4781-bc3c-e07252dcf591" />
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/5d2d86c0-cc64-42fb-a142-ff62c14a75ce" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/06dd04c6-0796-4755-b837-eada15e0e7ce" />
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/ef1c5671-d9b2-45ec-af00-6c0fc2dca683" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/4ccb9c5d-69c6-4463-bef0-14c554ec05aa" />
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/0f445106-aa5e-46d9-b40b-91c4443d4c98" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/d55b3e61-8d36-493e-b815-cd9210f7c9b1" />
