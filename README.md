@@ -58,3 +58,13 @@ Encourages collaborative and community-based learning
 In conclusion, this E-Learning Platform is a step toward digital education empowerment. It supports personalized learning experiences and bridges the gap between learners and educators in an efficient and modern way. With future enhancements like AI-based recommendations, gamification, and multilingual support, this platform can evolve into a powerful tool for learners across the globe.
 
 Output :
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/569b0862-7836-4d3c-a860-0f746c7a98b6" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/eadfb0e4-156b-46b2-b705-3ed1f61747cd" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/5d2d86c0-cc64-42fb-a142-ff62c14a75ce" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/ef1c5671-d9b2-45ec-af00-6c0fc2dca683" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/0f445106-aa5e-46d9-b40b-91c4443d4c98" />
